@@ -55,8 +55,8 @@ if __name__ == '__main__':
 
     print("Welcome my Friends to our TicTac Toe!\n"
           "Firstly you need to set your names\n"
-          "After that you need to write the line and column"
-          "where do you want to put you X/O.\n"
+          "After that you need to write the line and column "
+          "where do you want to put your X/O.\n"
           )
 
     print("Text the name of first player")
@@ -92,5 +92,6 @@ if __name__ == '__main__':
             turn = 'Y'
         else:
             turn = 'X'
+    display_table(move_table)
 
-    print("It's a Tie.")
+    print("\nIt's a Tie.")
