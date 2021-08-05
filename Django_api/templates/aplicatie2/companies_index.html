@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a href="{% url 'aplicatie2:adaugare' %}">Adauga Companie</a>
+    <table>
+        <thead>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Website</th>
+            <th>Company type</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            {% for item in companies_list %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.website }}</td>
+                    <td>{{ item.company_type }}</td>
+                    <td>{{ item.location.country }} ---- {{ item.location.city }}</td>
+                    <td><a href="{% url 'aplicatie1:modificare' item.id %}">Modifica</a></td>
+                </tr>
+
+
+
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
